@@ -1,26 +1,28 @@
 // Переключение темы
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.documentElement;
+const toggleBtn = document.getElementById('theme-toggle');
+const html = document.documentElement;
 
 const savedTheme = localStorage.getItem('theme') || 'light';
-body.setAttribute('data-theme', savedTheme);
-themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+html.setAttribute('data-theme', savedTheme);
 
-themeToggle.addEventListener('click', () => {
-    const isDark = body.getAttribute('data-theme') === 'dark';
-    const newTheme = isDark ? 'light' : 'dark';
-
-    body.setAttribute('data-theme', newTheme);
+toggleBtn.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 });
 
-// Обработка формы контактов
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Спасибо! Ваше сообщение успешно отправлено (имитация).');
-        contactForm.reset();
-    });
-}
+// МОБИЛЬНОЕ МЕНЮ
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.nav-links');
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+});
+
+// Закрытие меню при клике на ссылку
+document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+    menu.classList.remove('is-active');
+    menuLinks.classList.remove('active');
+}));

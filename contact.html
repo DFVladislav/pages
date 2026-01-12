@@ -2,41 +2,55 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты | CyberCafe</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Cyber<span>Cafe</span></div>
+            <div class="logo">
+                <img src="./img/coffe.svg" alt="Logo">
+                Cyber<span>Cafe</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="about.html">О нас</a></li>
                 <li><a href="blog.html">Блог</a></li>
                 <li><a href="contact.html" class="active">Контакты</a></li>
+                <li><button id="theme-toggle">🌙</button></li>
             </ul>
-            <button id="theme-toggle">🌙</button>
         </nav>
     </header>
 
     <main class="container page-content">
         <h1>Свяжитесь с нами</h1>
         <div class="contact-wrapper">
-            <form class="contact-form">
-                <input type="text" placeholder="Имя" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Ваше сообщение" rows="5"></textarea>
-                <button type="submit" class="btn">Отправить</button>
-            </form>
             <div class="contact-info">
-                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=400" alt="Map Placeholder" class="contact-img">
+                <h3>Где мы находимся?</h3>
                 <p>📍 ул. Программистов, 101, Москва</p>
                 <p>📞 8 (800) 555-35-35</p>
+                <p>✉️ hello@cybercafe.ru</p>
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=400" alt="Карта" class="contact-map-img">
             </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
         </div>
     </main>
 
-    <footer><div class="container"><p>&copy; 2024 CyberCafe.</p></div></footer>
+    <footer>
+        <div class="container"><p>&copy; 2024 CyberCafe. Сделано для GitHub Pages.</p></div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
