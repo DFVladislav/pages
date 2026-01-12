@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты | CyberCafe</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Cyber<span>Cafe</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main class="container page-content">
+        <h1>Свяжитесь с нами</h1>
+        <div class="contact-wrapper">
+            <form class="contact-form">
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Ваше сообщение" rows="5"></textarea>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+            <div class="contact-info">
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=400" alt="Map Placeholder" class="contact-img">
+                <p>📍 ул. Программистов, 101, Москва</p>
+                <p>📞 8 (800) 555-35-35</p>
+            </div>
+        </div>
+    </main>
+
+    <footer><div class="container"><p>&copy; 2024 CyberCafe.</p></div></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
